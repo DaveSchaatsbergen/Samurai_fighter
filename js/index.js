@@ -420,7 +420,6 @@ function changeHitbox (direction_charachter, what_player) {
 
 function increaseWin () {
     if (player2.health === 0 && gameover === true && increasedWin === false) {
-        console.log('komt in functie');
         // increase player 1 win count
         let win = document.getElementById('count_player_1').innerHTML;
         win++;

@@ -54,8 +54,12 @@ function restartGame() {
         player.health = 100
         player2.health = 100;
         document.querySelector('#win_message').innerHTML = '';
-        document.querySelector('#player1_current_health').style.width = 100 + "%";
-        document.querySelector('#player2_current_health').style.width = 100 + "%";
+        gsap.to('#player1_current_health', {
+            width: player.health + 100 + "%"
+        });
+        gsap.to('#player2_current_health', {
+            width: player2.health + 100 + "%"
+        });
         player.update();
         player2.update();
     }
