@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* healthbar */
+#main_container {
+    position: relative;
+    display: inline-block;
+}
+
+#health_container {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+}
+
+.healthwrapper {
+    position: relative;
+    width: 100%;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+#player1_health_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    border-left: 4px solid white;
+}
+
+#player2_health_wrapper {
+    border-right: 4px solid white;
+}
+
+#timer {
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border: 4px solid white;
+   
+}
+
+.healthbar {
+    background-color: rgba(0,0,0,0.15);
+    width: 100%;
+    height: 30px;
+}
+
+#player1_current_health, #player2_current_health {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+}
+
+#player1_current_health {
+    width: 100%;
+}
+
+#player2_current_health {
+    left: 0;
+}
+/* win message */
+#win_message {
+    position: absolute;
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* controlers */
+.controllers {
+    width:  1024px;
+    height: 10%;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 45%;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 70%;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease-in-out;
+  }
+
+
+  .button:hover {
+    transform: scale(1.2, 1.2);
+  }
+
+  /* wins */
+  #player_1_wins, #player_2_wins {
+      position: absolute;
+      text-align: center;
+      font-size: 1em;
+  }
+
+  #player_1_wins {
+      left: 5%;
+      top: 5%;
+  }
+
+  #player_2_wins {
+      right: 5%;
+      top: 5%;
+  }
+
+  /* 1920 width */
+  @media only screen and (max-width: 1920px) {
+      .controllers {
+          bottom: 30%;
+      }
+  }
+
+  /* 1600 width */
+  @media only screen and (max-width: 1600px) {
+    .controllers {
+        bottom: 35%;
+    }
+
+    #player_1_wins {
+        left: 3%;
+        font-size: .8em;
+    }
+  
+    #player_2_wins {
+        right: 3%;
+        font-size: .8em;
+    }
+
+}
+
+ /* 1400 width */
+ @media only screen and (max-width: 1440px) {
+    .controllers {
+        bottom: 15%;
+    }
+
+    #player_1_wins {
+        left: 2%;
+        font-size: .6em;
+    }
+  
+    #player_2_wins {
+        right: 2%;
+        font-size: .6em;
+    }
+
+}
+
+/* width 1280 */
+@media only screen and (max-width: 1280px) {
+    .controllers {
+        bottom: 20%;
+    }
+
+    #player_1_wins {
+        top: 8%;
+        left: 20%;
+        font-size: .8em;
+        color: white;
+    }
+  
+    #player_2_wins {
+        top: 8%;
+        right: 20%;
+        font-size: .8em;
+        color: white;
+    }
+
+}
+/* width 1024 */
+
+@media only screen and (max-width: 1024px) {
+    .controllers {
+        bottom: 0%;
+    }
+
+    #player_1_wins {
+        top: 10%;
+        left: 12.5%;
+        color: white;
+    }
+  
+    #player_2_wins {
+        top: 10%;
+        right: 12.5%;
+        color: white;
+    }
+
+}

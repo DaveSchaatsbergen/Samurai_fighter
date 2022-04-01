@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Samurai fighter</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/classes.js" defer></script>
+    <script src='js/index.js' defer></script>
+    <script src="https://kit.fontawesome.com/7efd0841a1.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <div id="main_container">
+        <div id="health_container">
+            <!-- player 1 health -->
+            <div class="healthwrapper" id="player1_health_wrapper">
+                <div id="playerHealthbar" class="healthbar">
+                    <div id="player1_current_health"></div>
+                </div>
+            </div>
+            <!-- timer -->
+            <div id="timer"></div>
+            <!-- player 2 health -->
+            <div class="healthwrapper" id="player2_health_wrapper">
+                <div id="player2Healthbar" class="healthbar">
+                    <div id="player2_current_health"></div>
+                </div>
+            </div>
+        </div>
+        <div id="win_message"></div>
+        <canvas></canvas>
+    </div>
+    <audio id="audio" autoplay loop>
+        <source src="music/music.mp3" type="audio/mp3" />
+    </audio>
+    <div class="controllers">
+        <button id="mute" class='button' type="button" onclick="play()">Play music</button>
+        <button id="unmute" class="button" type="button" onclick="stop()">Stop music</button>
+    </div>
+    <div id="player_1_wins">
+        <p>Player 1 wins:</p>
+        <p id="count_player_1">0</p>
+    </div>
+    <div id="player_2_wins">
+        <p>Player 2 wins:</p>
+        <p id="count_player_2">0</p>
+    </div>
+</body>
+</html>
